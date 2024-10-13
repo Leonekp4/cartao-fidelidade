@@ -1,0 +1,88 @@
+
+
+ header {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+
+    & .img {
+        width: 6.2144rem;
+        height: auto;
+    }
+
+    & .form {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--gray-300);
+        border-radius: 10px;
+        padding: 0.5rem;
+        border: 1px solid var(--gray-400);
+
+        &:focus-within {
+            outline: none;
+            border: 1px solid var(--pink);
+            opacity: 1;
+        }
+    }
+
+    & input {
+        background-color: var(--gray-300);
+        border: none;
+        outline: none;
+        width: 21.9375rem;
+        color: var(--gray-700);
+        font-size: var(--Text-md);
+
+        &::placeholder {
+            color: var(--gray-500);
+            font-size: var(--Text-md);
+        }
+    }
+
+    & button {
+        display: flex;
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+        background-color: var(--gray-700);
+        border-radius: 8px;
+        opacity: 0.6;
+        cursor: pointer;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+
+        &:hover {
+            opacity: 1;
+            border-color: var(--gray-600);
+        }
+
+        &:active {
+            transform: scale(1.1); /* Aplica a animação de "salto" ao clicar */
+            opacity: 1;
+        }
+    }
+
+    @media (min-width: 50rem) {
+        margin-top: 4rem;
+        /* gap: 2rem; */
+
+        & .img {
+            width: 7.25rem;
+        }
+
+        & .form {
+            width: 25rem;
+
+            & input {
+                width: 25rem;
+            }
+        }
+    }
+}

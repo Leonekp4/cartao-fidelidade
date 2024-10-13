@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Fidelidade</title>
+
+    <link rel="stylesheet" href="styles/index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <img src="../assets/asset/Logo.png" alt="">
+     
+     <form id="formulario" onsubmit="compararNumero(event)">
+         <input id="card" type="text" placeholder="ID do cartão" oninput="validarEntrada()" maxlength="20" required>
+     </form>
+ 
+     <p id="resultado"></p>
+ 
+     <script>
+         // Função para permitir apenas números e sinais + e -
+         function validarEntrada() {
+             const input = document.getElementById('card');
+             input.value = input.value.replace(/[^0-9+\-]/g, '')
+         }
+ 
+         // Lista de números válidos e suas URLs
+         const numerosValidos = {
+             "124-537-835-230": "../../clients/client-01.html", 
+             "207-245-699-104": "../../clients/client-02.html",
+             "523-114-876-908": "../../clients/client-03.html"
+         };
+ 
+         // Função para comparar o número digitado com os números válidos
+         function compararNumero(event) {
+             event.preventDefault(); // Evita o envio do formulário
+             
+             const numeroDigitado = document.getElementById('card').value
+             const resultado = document.getElementById('resultado')
+ 
+             // Verifica se o número digitado está na lista de números válidos
+             if (numerosValidos[numeroDigitado]) {
+                 resultado.textContent = "Número válido!"
+                 resultado.style.color = "green"
+                 // Redireciona para a URL correspondente na mesma aba
+                 window.location.href = numerosValidos[numeroDigitado]
+             } else {
+                 resultado.textContent = "Número inválido!"
+                 resultado.style.color = "red"
+             }
+         }
+     </script>
+ </body>
+   
+</html>

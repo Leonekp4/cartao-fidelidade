@@ -1,0 +1,319 @@
+main {
+
+    
+    & .person {
+
+        margin-bottom: 0.5rem;
+      
+       & h1 {
+            font: var(--Title-sm);
+        }
+
+        p {
+            font:var(--Text-xs) ;
+        }
+    
+    }
+
+    & .fidelidade {
+ 
+        width: 25.5rem;
+        height: 14.9375rem;
+        margin: auto;
+        padding: 1.2rem;
+        border-radius: 16px;
+        background-color: var(--white);
+        border: 1px solid var(--gray-400);
+
+        & h2 {
+            color: var(--gray-500);
+            font: var(--subtitle-sm);
+        }
+
+        & p {
+            color: rebeccapurple;
+            padding: 2px 0 10px  0;
+            font: var(--Text-xs);
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        & .button-container {
+            display: flex;
+            color: var(--gray-400);
+            padding: 0.5rem;
+            background-color: var(--gray-200);
+            border: 1px solid;
+            border-radius: 10px;
+            
+
+            & button{
+                border: none;
+                background-color: var(--gray-200);
+                font: var(--subtitle-sm);
+                opacity: 60%;
+                cursor: auto;
+                
+            }
+
+        }
+
+        .flx {
+            display: flex;
+            align-items: flex-start;
+            gap: 4rem;
+        }
+
+
+                      
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 colunas de largura igual */
+            gap: 8px; /* Espaçamento entre os itens */
+            list-style-type: none; /* Remove os marcadores da lista */
+            padding: 0; /* Remove o padding padrão */
+        }
+        
+        li {
+            background-color: var(--gray-200); /* Cor de fundo dos itens */
+            padding: 8px; /* Espaçamento interno */
+            text-align: center; /* Centraliza o texto */
+            width: 3.5rem; /* Largura do quadrado (ajuste conforme necessário) */
+            height: 3.5rem; /* Altura do quadrado (ajuste conforme necessário) */
+
+            display: flex; /* Define o contêiner como flexível */
+            flex-direction: column; /* Alinha os itens em coluna */
+            justify-content: center; /* Alinha verticalmente ao centro */
+            align-items: center; /* Alinha horizontalmente ao centro */
+
+            border-radius: 16px;
+
+            & img{
+                width: 2.5rem;
+                height: 2.5rem;
+                
+            }
+        }
+
+
+
+
+
+    }
+
+    & .cortes {
+        width: 25.5rem;
+        margin: auto;
+        padding: 1rem;
+        height: 5.5rem;
+        border-radius: 16px;
+        background-color: var(--white);
+        border: 1px solid var(--gray-400); 
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    
+        .cortes-info h2 {
+            font: var(--Text-xs);
+            color: var(--gray-500);
+            margin-bottom: 15px;
+            
+        }
+    
+        /* Wrapper para alinhar a barra e a imagem lado a lado */
+        .progress-wrapper {
+            display: flex;
+            align-items: center; /* Alinha verticalmente ao centro */
+            justify-content: space-between; /* Distribui espaço igualmente */
+            width: 100%; /* Faz o container ocupar toda a largura */
+            gap: 10px; /* Espaçamento entre a barra, texto e a imagem */
+        }
+    
+        .progress-container {
+            flex: 1; /* Faz a barra ocupar o máximo de espaço disponível */
+            background-color: var(--gradient-base);
+            border-radius: 10px;
+            height: 10px;
+            position: relative;
+        }
+    
+        .progress-bar {
+            height: 100%; /* A barra de progresso ocupa toda a altura */
+            background-color: #45B442;
+            border-radius: 10px;
+        }
+    
+        .gift-icon img {
+            width: 50px;
+            height: 50px;
+        }
+    
+        /* Adicionando estilos para o texto "7 de 10" */
+        .progress-wrapper p {
+            margin: 0;
+            font-size: var(--Text-xs);
+            color: var(--gray-500);
+        }
+    }
+
+    
+    & {
+        .historico {
+            width: 25.5rem; /* Ajuste a largura conforme necessário */
+            margin: auto;
+            padding: 1.2rem; /* Espaçamento interno */
+            border-radius: 16px; /* Cantos arredondados */
+            background-color: var(--white); /* Cor de fundo */
+            border: 1px solid var(--gray-400); /* Borda do fieldset */
+            margin-top: 1rem; /* Espaçamento acima */
+        }
+        
+        .container-main {
+            display: flex; /* Flexbox para layout */
+            flex-direction: column; /* Direção em coluna */
+        }
+        
+        .history-heading {
+            margin-bottom: 1rem; /* Espaço abaixo do cabeçalho */
+        }
+        
+        .subtitle-sm {
+            font: var(--subtitle-sm); /* Tamanho da fonte para o subtítulo */
+            /* font:var(--title-sm); Negrito */
+            color: var(--gray-800); /* Cor do texto */
+        }
+        
+        .text-xs {
+            font:var(--Text-xs); /* Tamanho da fonte para texto menor */
+            color: var(--gray-600); /* Cor do texto */
+        }
+        
+        hr {
+            border: 0; /* Remove a borda padrão */
+            height: 1px; /* Altura da linha horizontal */
+            background-color: var(--gray-400); /* Cor da linha horizontal */
+            margin: 0.5rem 0; /* Margem em cima e embaixo */
+        }
+        
+        .history-cards {
+            list-style-type: none; /* Remove os marcadores da lista */
+            padding: 0; /* Remove o padding padrão */
+            margin: 0; /* Remove a margem padrão */
+        }
+        
+        .history-card {
+            display: flex; /* Flexbox para o cartão */
+            justify-content: space-between; /* Espaço entre os itens */
+            align-items: center; /* Alinha os itens verticalmente */
+            padding: 0.5rem; /* Espaçamento interno no cartão */
+            background-color: var(--gradient-light); /* Cor de fundo do cartão */
+            border-radius: 8px; /* Cantos arredondados */
+            margin-bottom: 0.5rem; /* Espaçamento entre os cartões */
+            transition: background-color 0.3s; /* Efeito de transição na cor de fundo */
+        }
+        
+        .history-card:hover {
+            background-color: var(--gradient-base); /* Cor ao passar o mouse */
+        }
+        
+        .time {
+            display: flex; /* Flexbox para o conteúdo de tempo */
+            flex-direction: column; /* Direção em coluna */
+        }
+        
+        .check img {
+            width: 24px; /* Largura da imagem */
+            height: 24px; /* Altura da imagem */
+        }
+        
+    }
+
+    & historico{
+        .loyalty-progress {
+    width: 25.5rem; /* Largura do componente */
+    margin: auto; /* Centraliza o componente */
+    padding: 1.2rem; /* Espaçamento interno */
+    border-radius: 16px; /* Cantos arredondados */
+    background-color: var(--white); /* Cor de fundo */
+    border: 1px solid var(--gray-400); /* Borda do componente */
+    display: flex; /* Flexbox para layout */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: space-between; /* Espaço entre os elementos */
+    margin-top: 1rem; /* Margem acima */
+}
+
+.progress-info {
+    flex: 1; /* Faz o contêiner de progresso ocupar o máximo de espaço */
+    display: flex; /* Flexbox para layout interno */
+    flex-direction: column; /* Alinha em coluna */
+    margin-right: 1rem; /* Espaçamento à direita */
+}
+
+.progress-remaining {
+    margin-bottom: 0.5rem; /* Espaçamento abaixo do texto */
+}
+
+.text-sm {
+    font-size: 1rem; /* Tamanho da fonte para o texto */
+    color: var(--gray-600); /* Cor do texto */
+}
+
+.title-sm {
+    
+    font: var(--title-sm);
+    /* font-weight: bold; Negrito para o número */
+    color: var(--gray-800); /* Cor do texto */
+}
+
+.progress-bar {
+    position: relative; /* Para o posicionamento da barra de progresso */
+}
+
+progress {
+    width: 100%; /* Largura total do progresso */
+    height: 10px; /* Altura da barra de progresso */
+    border-radius: 10px; /* Cantos arredondados */
+    background-color: var(--gray-200); /* Cor de fundo da barra */
+}
+
+progress::-webkit-progress-value {
+    background-color: #45B442; /* Cor do progresso (preenchido) */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+progress::-moz-progress-bar {
+    background-color: #45B442; /* Cor do progresso (preenchido) */
+    border-radius: 10px; /* Cantos arredondados */
+}
+
+.text-xs {
+    font-size: 0.8rem; /* Tamanho da fonte para texto pequeno */
+    color: var(--gray-500); /* Cor do texto */
+    text-align: center; /* Centraliza o texto abaixo da barra */
+}
+
+.gift-image {
+    display: flex; /* Flexbox para imagem */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.gift-image img {
+    width: 50px; /* Largura da imagem do presente */
+    height: 50px; /* Altura da imagem do presente */
+}
+
+    }
+}
+
+
+
+
+
+

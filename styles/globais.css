@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Cores */
+    --pink: #D658B3;
+    --green: #45B442;
+    --gray-700: #332B31;
+    --gray-600: #4A4448;
+    --gray-500: #756C71;
+    --gray-400: #D3CFD2;
+    --gray-300: #DFDCDF;
+    --gray-200: #E9E7E9;
+    --gray-100: #F4F1F2;
+    --white: #FFFFFF;
+    --gradient-base: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%);
+
+    /* Fontes */
+    --font-family: "Oxygen", sans-serif;
+    --Title-md: 700 1.5rem/1.4 var(--font-family);
+    --Title-sm: 700 1.125rem/1.4 var(--font-family);
+    --Subtitle-md: 700 0.875rem/1.4 var(--font-family);
+    --subtitle-sm: 700 0.75rem/1.4 var(--font-family);
+    --Text-md: 400 1rem/1.4 var(--font-family);
+    --Text-sm: 400 0.875rem/1.4 var(--font-family);
+    --Text-xs: 400 0.75rem/1.4 var(--font-family);
+}
+
+body {
+    background-color: var(--gray-100);
+}
+
+
+.person {
+    border: none;
+    
+}
+
+
+.flex {
+    display: flex;
+    height: 5rem;
+    max-width: 25.5rem; /* Define a largura máxima */
+    margin: auto;   /* Centraliza o elemento na página */
+    padding: 0.5rem;    /* Adiciona um pouco de espaço interno */
+    border: 1px solid #ccc; /* Apenas para visualização */
+    border-radius: 16px; /* Bordas arredondadas */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    gap: 1rem;
+}
+
+
+.flex-1 {
+    flex: 1;
+    
+}
+
+.flex-2 {
+    flex: 5;
+}
+
+.photo {
+    width: 3.5rem; /* Ajusta a largura da imagem */
+    height: 3.5rem; /* Mantém a proporção da imagem */
+    border-radius: 16px; /* Faz as bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra à imagem */
+    margin-right: 1rem; /* Adiciona um espaçamento à direita da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+}
+
+
+
+
